@@ -44,9 +44,9 @@ async function getMarketCap(symbol) {
 async function poll() {
   try {
     const res = await axios.get(UW_URL, {
-      headers: { Authorization: UW_TOKEN },
-      params: { limit: 100 }
-    });
+  headers: { Authorization: `Bearer ${process.env.UW_TOKEN}` },
+  params: { limit: 100 }
+});
 
     const alerts = res.data?.data || [];
 
