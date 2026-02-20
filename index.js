@@ -11,6 +11,9 @@ const required = [
   "TO_NUMBER",
 ];
 
+const MIN_PREMIUM = Number(process.env.MIN_PREMIUM ?? 25000);
+const SMALL_CAP_MAX = Number(process.env.SMALL_CAP_MAX ?? 2000000000);
+
 // ---- DEBUG (prints only keys/names, no secrets)
 console.log(
   "ENV HAS TWILIO_ACCOUNT_SID?",
