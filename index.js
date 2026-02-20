@@ -2,12 +2,8 @@ import axios from "axios";
 import cron from "node-cron";
 import Twilio from "twilio";
 
-const required = [
-  "TWILIO_ACCOUNT_SID",
-  "TWILIO_AUTH_TOKEN",
-  "TWILIO_FROM",
-  "TO_NUMBER",
-];
+console.log("ENV HAS TWILIO_ACCOUNT_SID?", Object.prototype.hasOwnProperty.call(process.env, "TWILIO_ACCOUNT_SID"));
+console.log("ENV KEYS (sample):", Object.keys(process.env).filter(k => k.includes("TWILIO") || k.includes("UW")).sort());
 
 for (const k of required) {
   if (!process.env[k]) {
