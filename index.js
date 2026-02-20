@@ -34,6 +34,14 @@ for (const k of required) {
 
 const client = Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
+// --- TEMP TEST SMS ---
+await client.messages.create({
+  from: process.env.TWILIO_FROM,
+  to: process.env.TO_NUMBER,
+  body: "✅ Bot is online and can send texts."
+});
+console.log("Sent startup test SMS");
+
 const UW_URL = "https://api.unusualwhales.com/api/option-trades/flow-alerts";
 
 async function getMarketCap(symbol) {
