@@ -42,7 +42,7 @@ Fetches live market cap data
 
 Sends SMS alert through Twilio API
 
-Runs every few minutes via cron scheduler
+Runs every few milliseconds via cron scheduler
 
 ⚙️ Environment Variables Required
 
