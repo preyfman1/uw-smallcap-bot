@@ -12,7 +12,7 @@ const {
   MIN_PREMIUM = "25000"
 } = process.env;
 
-const client = Twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
+const client = Twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
 
 const UW_URL = "https://api.unusualwhales.com/api/option-trades/flow-alerts";
 
